@@ -1,0 +1,167 @@
+@charset "utf-8";
+/* NTS UI Development 2Team HJS,KHS 110610 */
+/* Common */
+html{overflow:auto}
+body,p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,dd,table,th,td,form,fieldset,legend,input,textarea,button,select{margin:0;padding:0}
+body,input,textarea,select,button,table{font-family:'나눔고딕',NanumGothic,'돋움',Dotum,Helvetica,AppleGothic,Sans-serif;font-size:12px}
+img,fieldset{border:0}
+ul,ol{list-style:none}
+em,address{font-style:normal}
+a{text-decoration:none}
+a:hover,a:active,a:focus{text-decoration:underline}
+legend,hr,caption{display:none}
+/* button{border:0;background:none} */
+.blind{visibility:hidden;overflow:hidden;position:absolute;top:0;left:0;width:0;height:0;font-size:0;line-height:0}
+
+#vending-machine {
+	padding: 5px;
+	width: 454px;
+	color: #181A21;
+	background-color: #F4F5F5;
+}
+
+#product-view {
+	width: 454px;
+	height: 272px;
+	background-color: #383F52;
+}
+
+#product-view ul {
+	position: absolute;
+	background-color: #F4F5F5;
+	width: 434px;
+	margin: 5px;
+	padding: 5px;
+}
+
+#product-view ul li{
+	float: left;
+	margin: 3px 3px auto 3px;
+}
+
+#product-view ul li div{
+	width: 102px;
+	height: 102px;
+	background-color: #9EA2B0;
+}
+
+#product-view ul li.on div{
+	background-color: #0CBE00;
+}
+
+#product-view ul li div img{
+	margin: 5px;
+}
+
+#product-view ul li p{
+	width: 100px;
+	padding: 3px 0;
+	text-align: center;
+}
+
+#money-view {
+	width: 454px;
+	height: 350px;
+	background-color: #383F52;
+	margin: 2px 0;
+}
+
+#money-view > div {
+	width: 219px;
+	height: 340px;
+	float: left;
+	margin: 5px 0 5px 5px;
+}
+
+#money-view > div.input-area {
+	text-align: center;
+}
+
+#money-view > div.input-area p {
+	
+	width: 200px;
+	height: 40px;
+	padding-top: 20px;
+	margin: auto;
+}
+
+#money-view > div.input-area p.input-label{
+	margin-top: 50px;
+	font-weight: bold;
+	font-size: 18px;
+	color: #F4F5F5;
+}
+
+#money-view > div.input-area p.input-drop{
+	background-color: #181A21;
+	font-size: 20px;
+	color: #D1D8EC;
+}
+
+#money-view > div.input-area p.input-drop span {
+	font-weight: bold;
+}
+
+#money-view > div.input-area button{
+	width: 100px;
+	height: 30px;
+	margin-top: 10px;
+}
+
+#money-view > div.wallet-area{
+	background-color: #F4F5F5;
+}
+
+#money-view > div.wallet-area ul{
+	height: 284px;
+}
+
+#money-view > div.wallet-area ul li{
+	padding: 15px 15px 0 15px;
+	position:relative;
+}
+
+#money-view > div.wallet-area ul li div{
+	width: 170px;
+	height: 56px;
+	position:relative;
+}
+
+#money-view > div.wallet-area ul li img{
+	float: left;
+	position: absolute;
+	left: 0px;
+	top: 0px;
+}
+
+#money-view > div.wallet-area > p{
+	padding: 15px;
+	padding-top: 20px;
+	font-size: 16px;
+}
+
+#money-view > div.wallet-area > p > span{
+	font-weight: bold;
+}
+
+#money-view > div.wallet-area ul li p{
+	float: left;
+	position: absolute;
+	width: 60px;
+	height: 20px;
+	background-color: #9EA2B0;
+	font-size: 14px;
+	font-weight: bold;
+	text-align: right;
+	padding-right: 3px;
+	padding-top: 5px;
+	left: 107px;
+	top: 31px;
+}
+
+#log {
+	font-size: 12px;
+	width: 452px;
+	height: 98px;
+	line-height: 20px;
+}
