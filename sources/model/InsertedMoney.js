@@ -1,0 +1,32 @@
+vm.InsertedMoney = iron.Class({
+	initialize: function(money) {
+		
+		this._money = 0;
+	},
+
+	get: function() {
+		return this._money;
+	},
+
+	insert: function(money) {
+		this._money += money;	
+	},
+
+	spend: function(money) {
+		
+		var currMoney = this._money;
+
+		this._money -= money;
+
+		if (this._money <= 0) {
+
+			this._money = currMoney;
+			throw new Error('not enough money');
+		}
+	},
+
+	reset: function() {
+		this._money = 0;	
+	}
+});
+
