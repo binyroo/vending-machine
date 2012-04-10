@@ -2,42 +2,39 @@
 <html lang="ko">
 <head>
 	<meta charset="UTF-8">
-	<title>ProductWindow Test</title>
+	<title>ProductItemComponent Test</title>
+
 	<link rel="stylesheet" href="../../../css/style.css">
 
 	<!-- Qunit start -->
-	<link rel="stylesheet" href="../../../lib/qunit.css" />
-	<script type="text/javascript" src="../../../lib/qunit.js"></script>
+	<link rel="stylesheet" href="http://code.jquery.com/qunit/qunit-git.css" />
+	<script type="text/javascript" src="http://code.jquery.com/qunit/qunit-git.js"></script>
 	<!-- Qunit end -->
 
 	<!-- Library start -->
-	<script type="text/javascript" src="../../../lib/jquery-1.7.1.js"></script>
+	<script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
 	<script type="text/javascript" src="../../../lib/iron.js"></script>
 	<!-- Library end -->
 
-	<!-- Source Start -->
+	<!-- Source start -->
 	<script type="text/javascript" src="../../../sources/common/Common.js"></script>
-	<script type="text/javascript" src="../../../sources/model/ProductVO.js"></script>
-	<script type="text/javascript" src="../../../sources/model/ProductProvider.js"></script>
 	<script type="text/javascript" src="../../../sources/view/component/ProductItemComponent.js"></script>
-	<script type="text/javascript" src="../../../sources/view/component/ProductWindow.js"></script>
-	<!-- Source End -->
+	<!-- Source end -->
 
-	<!-- Test Start -->
-	<script type="text/javascript" src="ProductWindow.qunit.js"></script>
-	<!-- Test End -->
+	<!-- Test start -->
+	<script type="text/javascript" src="ProductItemComponent.qunit.js"></script>
+	<!-- Test end -->
 </head>
 <body>
-	<h1 id="qunit-header">ProductWindow Test</h1>
+	<h1 id="qunit-header">ProductItemComponent Test</h1>
 	<h2 id="qunit-banner"></h2>
 	<h2 id="qunit-userAgent"></h2>
 	<ol id="qunit-tests"></ol>
-	
+
 	<div id="vending-machine">
 
 		<div id="product-view">
 			<ul>
-			<!--
 			  <li>
 			    <div><img src="http://binyroo.github.com/VendingMachine/img/myImg.jpg" width="92" height="92" alt=""></div>
 			    <p><strong>콜라</strong>|<span>100원</span></p>
@@ -69,8 +66,7 @@
 			  <li>
 			    <div><img src="http://binyroo.github.com/VendingMachine/img/myImg.jpg" width="92" height="92" alt=""></div>
 			    <p><strong>콜라</strong>|<span>100원</span></p>
-				</li>
-			-->
+			  </li>
 			</ul>
 		</div>
 		
