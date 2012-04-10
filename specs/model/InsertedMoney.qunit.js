@@ -50,25 +50,6 @@ jQuery(function() {
 		equal(m.get(), 300);
 	});
 
-	test('spend exception', function() {
-		// Given
-		var m = new vm.InsertedMoney();
-		m.insert(300);
-
-		// When
-		try {
-
-			m.spend(700);
-			ok(false);
-
-		} catch(e) {
-			
-			// Then
-			ok(e);
-			equal(m.get(), 300);
-		}
-	});
-
 	test('reset', function() {
 		
 		// Given

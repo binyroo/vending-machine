@@ -110,10 +110,10 @@ jQuery(function() {
 				for (var i = 0; i < list.length; i++) {
 					prodVO = list[i];
 
-					if (!validateNameOrImg(prodVO.name)
-						|| !validateNameOrImg(prodVO.img)
-						|| !validatePrice(prodVO.price)
-						|| !validateStockCount(prodVO.stockCount)) {
+					if (!validateNameOrImg(prodVO.getName())
+						|| !validateNameOrImg(prodVO.getImg())
+						|| !validatePrice(prodVO.getPrice())
+						|| !validateStockCount(prodVO.getStockCount())) {
 						return false;
 					}
 				}
@@ -154,10 +154,10 @@ jQuery(function() {
 		var provider = vm.ProductProvider;
 
 		// When
-		var data = provider.get();
+		var list = provider.get();
 
 		// Then
-		equal(data.length, 8);
-		ok(this.validateData(data));
+		equal(list.length, 8);
+		ok(this.validateData(list));
 	});
 });
