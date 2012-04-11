@@ -1,4 +1,4 @@
-vm.ProductWindow = iron.Class({
+vm.ProductWindow = iron.Class(iron.Dispatcher, {
 	initialize: function() {
 		// code
 	},
@@ -8,7 +8,7 @@ vm.ProductWindow = iron.Class({
 	},
 
 	getElement: function() {
-		return this._wrap[0];	
+		return this._wrap[0];
 	},
 
 	setList: function(list) {
@@ -17,11 +17,19 @@ vm.ProductWindow = iron.Class({
 		this._compList = [];
 
 		for (var i = 0; i < list.length; i++) {
+
 			var item = this._createProductItemComponent(list[i].get());
 			this._wrap.append(item.getElement());
 
 			this._compList.push(item);
 		}
+
+		this._addEventListeners();
+	},
+
+	_addEventListeners: function() {
+		
+		this._wrap.on('click', 'li.on', this._onClickProduct.bind(this));
 	},
 
 	updateOnMoney: function(money) {
@@ -79,6 +87,15 @@ vm.ProductWindow = iron.Class({
 		comp.setData(data);
 
 		return comp;
+	},
+
+	_onClickProduct: function(e) {
+
+		var li = $(e.currentTarget);
+
+		this.dispatch('select_product', {
+			selectedIndex: li.index()
+		});
 	}
 });
 

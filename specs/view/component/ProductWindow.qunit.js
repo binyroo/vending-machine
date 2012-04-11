@@ -101,4 +101,49 @@ jQuery(function() {
 		
 		ok(notStockItem.is('.disabled'));
 	});
+
+	test('click product', function() {
+		
+		// Given
+		var comp = this.getProdWindow();
+		var list = vm.ProductProvider.get();
+
+		comp.setList(list);
+		comp.updateOnMoney(10000);
+
+		// When
+		var selectedIndex = -1;
+		var li = $('#product-view ul li').eq(0);
+
+		comp.addListener('select_product', function(e) {
+			selectedIndex = e.selectedIndex;
+		});
+
+		li.click();
+
+		// Then
+		equal(selectedIndex, 0);
+	});
+
+	test('not click disable product', function() {
+		
+		// Given
+		var comp = this.getProdWindow();
+		var list = vm.ProductProvider.get();
+
+		comp.setList(list);
+
+		// When
+		var selectedIndex = -1;
+		var li = $('#product-view ul li').eq(0);
+
+		comp.addListener('select_product', function(e) {
+			selectedIndex = e.selectedIndex;
+		});
+
+		li.click();
+
+		// Then
+		equal(selectedIndex, -1);
+	});
 });
