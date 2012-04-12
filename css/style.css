@@ -98,6 +98,14 @@ legend,hr,caption{display:none}
 	color: #D1D8EC;
 }
 
+#money-view > div.input-area p.ui-droppable-active{
+	background-color: #0cbe00;
+}
+
+#money-view > div.input-area p.ui-droppable-over{
+	background-color: #079900;
+}
+
 #money-view > div.input-area p.input-drop span {
 	font-weight: bold;
 }
@@ -125,6 +133,10 @@ legend,hr,caption{display:none}
 	width: 170px;
 	height: 56px;
 	position:relative;
+}
+
+#money-view > div.wallet-area ul li div.ui-draggable-dragging{
+	z-index: 9999;
 }
 
 #money-view > div.wallet-area ul li img{
