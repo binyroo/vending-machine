@@ -11,7 +11,7 @@ vm.VendingMachineFacade = iron.Class(puremvc.Facade, {
 		
 		puremvc.Facade.prototype.initializeController.call(this);
 		
-		this.registerCommand(vm.VendingMachineFacade.STARTUP, vm.StartUpCommand);
+		this.registerCommand(vm.VendingMachineFacade.STARTUP, vm.StartupCommand);
 	},
 	
 	startup: function() {

@@ -1,6 +1,6 @@
 jQuery(function() {
 	
-	module('StartUpCommand', {
+	module('StartupCommand', {
 		
 		setup: function() {
 
@@ -29,21 +29,21 @@ jQuery(function() {
 		}
 	});
 
-	test('StartUpCommand is MacroCommand', function() {
+	test('StartupCommand is MacroCommand', function() {
 		
-		var comm = new vm.StartUpCommand();
+		var comm = new vm.StartupCommand();
 		
 		ok(comm instanceof puremvc.MacroCommand);
 	});
 
-	test('StartUpCommand exec', function() {
+	test('StartupCommand exec', function() {
 		
 
 		// Given
 		var PrepareProductWindowCommand = this.getMockCommandClass('prepareProductWindowCommand');
 		vm.PrepareProductWindowCommand = PrepareProductWindowCommand;
 
-		var command = new vm.StartUpCommand();
+		var command = new vm.StartupCommand();
 
 		// When
 		var notification = this.getMockNotification();

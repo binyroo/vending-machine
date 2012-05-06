@@ -1,4 +1,4 @@
-vm.StartUpCommand = iron.Class(puremvc.MacroCommand, {
+vm.StartupCommand = iron.Class(puremvc.MacroCommand, {
 
 	initialize: function() {
 		
