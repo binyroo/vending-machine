@@ -12,6 +12,7 @@
 
 		<div id="product-view">
 			<ul>
+			<!--
 			  <li>
 			    <div><img src="img/myImg.jpg" width="92" height="92" alt=""></div>
 			    <p><strong>콜라</strong>|<span>100</span>원</p>
@@ -44,6 +45,7 @@
 			    <div><img src="img/myImg.jpg" width="92" height="92" alt=""></div>
 			    <p><strong>콜라</strong>|<span>100</span>원</p>
 			  </li>
+			-->
 			</ul>
 		</div>
 		
@@ -96,12 +98,21 @@
 
 <script type="text/javascript" src="sources/common/Common.js"></script>
 
-<script type="text/javascript" src="sources/VendingMachineFacade.js"></script>
+<script type="text/javascript" src="sources/model/ProductVO.js"></script>
+<script type="text/javascript" src="sources/model/ProductProvider.js"></script>
+<script type="text/javascript" src="sources/model/ProductListProxy.js"></script>
 
+<script type="text/javascript" src="sources/view/component/ProductItemComponent.js"></script>
+<script type="text/javascript" src="sources/view/component/ProductWindow.js"></script>
+<script type="text/javascript" src="sources/view/ProductWindowMediator.js"></script>
+
+<script type="text/javascript" src="sources/controller/PrepareProductWindowCommand.js"></script>
 <script type="text/javascript" src="sources/controller/StartUpCommand.js"></script>
 
+<script type="text/javascript" src="sources/VendingMachineFacade.js"></script>
+
 <script type="text/javascript">
-var app = binyroo.VendingMachineFacade.getInstance(binyroo.VendingMachineFacade.NAME);
+var app = vm.VendingMachineFacade.getInstance(vm.VendingMachineFacade.NAME);
 app.startup();
 </script>
 

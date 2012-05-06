@@ -1,6 +1,11 @@
-binyroo.StartUpCommand = iron.Class(puremvc.SimpleCommand, {
-	execute: function(notification) {
+vm.StartUpCommand = iron.Class(puremvc.MacroCommand, {
+
+	initialize: function() {
 		
-//		alert('startup');
+		puremvc.MacroCommand.call(this);
+	},
+
+	initializeMacroCommand: function() {
+		this.addSubCommand(vm.PrepareProductWindowCommand);	
 	}
 });
