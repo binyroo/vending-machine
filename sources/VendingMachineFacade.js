@@ -1,38 +1,37 @@
 (function() {
 
-binyroo.VendingMachineFacade = iron.Class(puremvc.Facade, {
+vm.VendingMachineFacade = iron.Class(puremvc.Facade, {
 	
 	initialize: function() {
 		
-		puremvc.Facade.apply(this, [ binyroo.VendingMachineFacade.NAME ]);
+		puremvc.Facade.apply(this, [ vm.VendingMachineFacade.NAME ]);
 	},
 	
 	initializeController: function() {
 		
 		puremvc.Facade.prototype.initializeController.call(this);
 		
-		this.registerCommand(binyroo.VendingMachineFacade.STARTUP, binyroo.StartUpCommand);
+		this.registerCommand(vm.VendingMachineFacade.STARTUP, vm.StartUpCommand);
 	},
 	
 	startup: function() {
 		
-		this.sendNotification(binyroo.VendingMachineFacade.STARTUP);
+		this.sendNotification(vm.VendingMachineFacade.STARTUP);
 	}
 });
 
-binyroo.VendingMachineFacade.getInstance = function(key) {
+vm.VendingMachineFacade.getInstance = function(key) {
 	
-	var key = binyroo.VendingMachineFacade.NAME;
+	var key = vm.VendingMachineFacade.NAME;
 	
 	if (!puremvc.Facade.hasCore(key)) {
-		new binyroo.VendingMachineFacade(key);
+		new vm.VendingMachineFacade(key);
 	}
 	
 	return puremvc.Facade.getInstance(key);
 }
 
-binyroo.VendingMachineFacade.NAME = 'VendingMachineFacade';
-
-binyroo.VendingMachineFacade.STARTUP = 'startup';
+vm.VendingMachineFacade.NAME = 'VendingMachineFacade';
+vm.VendingMachineFacade.STARTUP = 'startup';
 
 })();
