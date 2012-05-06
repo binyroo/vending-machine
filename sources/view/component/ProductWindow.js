@@ -1,6 +1,6 @@
 vm.ProductWindow = iron.Class(iron.Dispatcher, {
 	initialize: function() {
-		// code
+		iron.Dispatcher.apply(this);
 	},
 
 	setElement: function(el) {
