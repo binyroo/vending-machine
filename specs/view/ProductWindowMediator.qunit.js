@@ -31,6 +31,10 @@ jQuery(function() {
 					this._initialized = true;
 				},
 
+				updateOnMoney: function(money) {
+					this._insertedMoney = money;
+				},
+
 				updateOnStock: function() {
 					this._updatedStock = true;
 				},
@@ -41,8 +45,13 @@ jQuery(function() {
 				},
 
 				// method for test
-				updated: function() {
+				updatedStock: function() {
 					return this._updatedStock;
+				},
+
+				// method for test
+				getInsertedMoney: function() {
+					return this._insertedMoney;
 				}
 			});
 
@@ -122,7 +131,8 @@ jQuery(function() {
 		// Then
 		deepEqual(med.listNotificationInterests(), [
 			vm.Const.INIT_PRODUCT_LIST,
-			vm.Const.UPDATE_PRODUCT_LIST
+			vm.Const.UPDATE_PRODUCT_LIST,
+			vm.Const.UPDATE_INSERTED_MONEY
 		]);
 	});
 
@@ -148,10 +158,25 @@ jQuery(function() {
 		this.facade.sendNotification(vm.Const.INIT_PRODUCT_LIST, {});
 
 		// When
-		this.facade.sendNotification(vm.Const.UPDATE_PRODUCT_LIST, { insertedMoney: 9000 });
+		this.facade.sendNotification(vm.Const.UPDATE_PRODUCT_LIST);
 
 		// Then
 		var comp = med.getViewComponent();
-		ok(comp.updated());
+		ok(comp.updatedStock());
+	});
+
+	test('handle notification UPDATE_INSERTED_MONEY', function() {
+		
+		// Given
+		var med = new vm.ProductWindowMediator();
+		this.facade.registerMediator(med);
+		this.facade.sendNotification(vm.Const.INIT_PRODUCT_LIST, {});
+
+		// When
+		this.facade.sendNotification(vm.Const.UPDATE_INSERTED_MONEY, { insertedMoney: 9000 });
+
+		// Then
+		var comp = med.getViewComponent();
+		equal(comp.getInsertedMoney(), 9000);
 	});
 });

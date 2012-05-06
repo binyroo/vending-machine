@@ -11,7 +11,8 @@ vm.ProductWindowMediator = iron.Class(puremvc.Mediator, {
 	listNotificationInterests: function() {
 		return [
 			vm.Const.INIT_PRODUCT_LIST,
-			vm.Const.UPDATE_PRODUCT_LIST
+			vm.Const.UPDATE_PRODUCT_LIST,
+			vm.Const.UPDATE_INSERTED_MONEY
 		];
 	},
 
@@ -31,6 +32,13 @@ vm.ProductWindowMediator = iron.Class(puremvc.Mediator, {
 			case vm.Const.UPDATE_PRODUCT_LIST:
 
 				comp.updateOnStock();
+
+				break;
+
+			case vm.Const.UPDATE_INSERTED_MONEY:
+
+				var money = note.getBody().insertedMoney;
+				comp.updateOnMoney(money);
 
 				break;
 		}
