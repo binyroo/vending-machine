@@ -1,10 +1,94 @@
-<!DOCTYPE HTML>
-<html lang="ko">
+<!DOCTYPE html>
+<html lang="ko"> 
 <head>
-  <meta charset="UTF-8">
-  <title></title>
+<meta charset="utf-8" />
+<title>자판기</title>
+<link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
-  
+
+	<div id="vending-machine">
+
+		<div id="product-view">
+			<ul>
+			  <li>
+			    <div><img src="img/myImg.jpg" width="92" height="92" alt=""></div>
+			    <p><strong>콜라</strong>|<span>100</span>원</p>
+			  </li>
+			  <li class="on">
+			    <div><img src="img/myImg.jpg" width="92" height="92" alt=""></div>
+			    <p><strong>콜라</strong>|<span>100</span>원</p>
+			  </li>
+			  <li>
+			    <div><img src="img/myImg.jpg" width="92" height="92" alt=""></div>
+			    <p><strong>콜라</strong>|<span>100</span>원</p>
+			  </li>
+			  <li>
+			    <div><img src="img/myImg.jpg" width="92" height="92" alt=""></div>
+			    <p><strong>콜라</strong>|<span>100</span>원</p>
+			  </li>
+			  <li>
+			    <div><img src="img/myImg.jpg" width="92" height="92" alt=""></div>
+			    <p><strong>콜라</strong>|<span>100</span>원</p>
+			  </li>
+			  <li>
+			    <div><img src="img/myImg.jpg" width="92" height="92" alt=""></div>
+			    <p><strong>콜라</strong>|<span>100</span>원</p>
+			  </li>
+			  <li>
+			    <div><img src="img/myImg.jpg" width="92" height="92" alt=""></div>
+			    <p><strong>콜라</strong>|<span>100</span>원</p>
+			  </li>
+			  <li>
+			    <div><img src="img/myImg.jpg" width="92" height="92" alt=""></div>
+			    <p><strong>콜라</strong>|<span>100</span>원</p>
+			  </li>
+			</ul>
+		</div>
+		
+		<div id="money-view">
+		
+			<div class="input-area">
+				<p class="input-label">투입구(Drop Here)</p>
+				<p class="input-drop"><span>0</span>원</p>
+				<button>반환버튼</button>
+			</div>
+			
+			<div class="wallet-area">
+				<ul>
+					<li>
+						<div class="money">
+							<img src="img/money0.png" width="120" height="56" alt="50원">
+							<p>50원</p>
+						</div>
+					</li>
+					<li>
+						<div class="money">
+							<img src="img/money1.png" width="120" height="56" alt="100원">
+							<p>100원</p>
+						</div>
+					</li>
+					<li>
+						<div class="money">
+							<img src="img/money2.png" width="120" height="56" alt="500원">
+							<p>500원</p>
+						</div>
+					</li>
+					<li>
+						<div class="money">
+							<img src="img/money3.png" width="120" height="56" alt="1000원">
+							<p>1000원</p>
+						</div>
+					</li>
+				</ul>
+				<p>지금 내 돈: <span>10000</span>원</p>
+			</div>
+		</div>
+		
+		<textarea id="log" name="log"></textarea>
+		
+	</div>
+
 </body>
 </html>
