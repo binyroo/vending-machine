@@ -6,7 +6,7 @@ var Const = {
 
 	PRODUCT_NAME: ["팹시", "V10", "녹차", "맹물", "환타", "식혜", "국물", "커피"],
 
-	IMAGE_PREFIX: 'http://binyroo.github.com/VendingMachine/img/pImg',
+	IMAGE_PREFIX: 'img/pImg',
 	IMAGE_EXTENSION: '.png',
 	IMAGE_ID_MAX: 22,
 	IMAGE_ID_MIN: 0,
