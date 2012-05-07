@@ -26,6 +26,11 @@ vm.Wallet = iron.Class(iron.Dispatcher, {
 	},
 
 	setTotalMoney: function(money) {
+
+		this.update(money);
+	},
+
+	update: function(money) {
 		
 		this._ownMoney = money;
 		this._updateOwnMoney();

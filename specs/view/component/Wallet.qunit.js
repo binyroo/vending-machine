@@ -59,6 +59,21 @@ jQuery(function() {
 		equal(ownEl.text(), '5000');
 	});
 
+	test('update', function() {
+		// Given
+		var wallet = new vm.Wallet();
+		var el = $('#money-view .wallet-area');
+		wallet.setElement(el[0]);
+
+		// When
+		wallet.setTotalMoney(10000);
+		wallet.update(5000);
+		
+		// Then
+		var ownEl = $('.wallet-area > p > span');
+		equal(ownEl.text(), '5000');
+	});
+
 	test('spend and save', function() {
 		
 		// Given
