@@ -12,12 +12,16 @@ vm.ProductListProxy = iron.Class(puremvc.Proxy, {
 		this.sendNotification(vm.Const.INIT_PRODUCT_LIST, this.getData());
 	},
 
-	selectProduct: function(index) {
+	sellProduct: function(index) {
 		
 		var product = this._getProduct(index);
 		product.sell();
 
 		this.sendNotification(vm.Const.UPDATE_PRODUCT_LIST);
+	},
+
+	getPriceAt: function(index) {
+		return this._getProduct(index).getPrice();
 	},
 
 	_getProduct: function(index) {

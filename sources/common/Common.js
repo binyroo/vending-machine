@@ -11,5 +11,6 @@ vm.Const = {
 
 	RESET_COIN_SLOT: 'resetCoinSlot',
 
-	INSERT_COIN: 'insertCoin'
+	INSERT_COIN: 'insertCoin',
+	LOST_COIN: 'lostCoin'
 };

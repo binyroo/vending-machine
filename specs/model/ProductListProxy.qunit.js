@@ -39,7 +39,25 @@ jQuery(function() {
 		
 	});
 
-	test('selectProduct', function() {
+	test('getPriceAt', function() {
+		
+		// Given
+		var proxy = new vm.ProductListProxy();
+		var productList = vm.ProductProvider.get();
+
+		this.facade.registerProxy(proxy);
+		proxy.initProductList(productList);
+
+		var product = productList[0];
+
+		// When
+		var expectPrice = proxy.getPriceAt(0);
+
+		// Then
+		equal(expectPrice, product.getPrice());
+	});
+
+	test('sellProduct', function() {
 		
 		// Given
 		var proxy = new vm.ProductListProxy();
@@ -52,7 +70,7 @@ jQuery(function() {
 		var currentStockCount = product.getStockCount();
 
 		// When
-		proxy.selectProduct(0);
+		proxy.sellProduct(0);
 
 		// Then
 		equal(product.getStockCount(), currentStockCount - 1);

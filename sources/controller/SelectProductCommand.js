@@ -6,9 +6,12 @@ vm.SelectProductCommand = iron.Class(puremvc.SimpleCommand, {
 	execute: function(note) {
 		
 		var selectedIndex = note.getBody().selectedIndex;
-		var proxy = this.facade.retrieveProxy('ProductListProxy');
+		var prodList = this.facade.retrieveProxy('ProductListProxy');
+		var insertedMoney = this.facade.retrieveProxy('InsertedMoneyProxy');
 
-		proxy.selectProduct(selectedIndex);
+		prodList.sellProduct(selectedIndex);
+
+		insertedMoney.spend(prodList.getPriceAt(selectedIndex));
 	}
 });
 
