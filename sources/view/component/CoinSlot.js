@@ -17,6 +17,11 @@ vm.CoinSlot = iron.Class(iron.Dispatcher, {
 		return this._wrap[0];
 	},
 
+	update: function(money) {
+		this._currentMoney = money;
+		this._update();
+	},
+
 	insertCoin: function(money) {
 		
 		this._currentMoney += money;

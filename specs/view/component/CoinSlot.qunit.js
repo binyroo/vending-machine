@@ -15,6 +15,21 @@ jQuery(function() {
 		deepEqual(slot.getElement(), el);
 	});
 
+	test('update', function() {
+		
+		// Given
+		var slot = new vm.CoinSlot();
+		var el = $('#money-view .input-area');
+		slot.setElement(el[0]);
+
+		// When
+		slot.update(1000);
+
+		// Then
+		var coinEl = el.find('p.input-drop > span');
+		equal(coinEl.text(), '1000');
+	});
+
 	test('insertCoin', function() {
 		
 		// Given
