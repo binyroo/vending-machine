@@ -173,7 +173,7 @@ jQuery(function() {
 		this.facade.sendNotification(vm.Const.INIT_PRODUCT_LIST, {});
 
 		// When
-		this.facade.sendNotification(vm.Const.UPDATE_INSERTED_MONEY, { insertedMoney: 9000 });
+		this.facade.sendNotification(vm.Const.UPDATE_INSERTED_MONEY, 9000);
 
 		// Then
 		var comp = med.getViewComponent();

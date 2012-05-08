@@ -7,5 +7,7 @@ vm.StartupCommand = iron.Class(puremvc.MacroCommand, {
 
 	initializeMacroCommand: function() {
 		this.addSubCommand(vm.PrepareProductWindowCommand);	
+		this.addSubCommand(vm.PrepareWalletCommand);	
+		this.addSubCommand(vm.PrepareCoinSlotCommand);	
 	}
 });

@@ -40,8 +40,14 @@ jQuery(function() {
 		
 
 		// Given
-		var PrepareProductWindowCommand = this.getMockCommandClass('prepareProductWindowCommand');
+		var PrepareProductWindowCommand = this.getMockCommandClass('prepareProductWindow');
 		vm.PrepareProductWindowCommand = PrepareProductWindowCommand;
+
+		var PrepareWalletCommand = this.getMockCommandClass(' prepareWallet');
+		vm.PrepareWalletCommand = PrepareWalletCommand;
+
+		var PrepareCoinSlotCommand = this.getMockCommandClass(' prepareCoinSlot');
+		vm.PrepareCoinSlotCommand = PrepareCoinSlotCommand;
 
 		var command = new vm.StartupCommand();
 
@@ -50,6 +56,6 @@ jQuery(function() {
 		command.execute(notification);
 
 		// Then
-		equal(notification.getBody().execMsg, 'prepareProductWindowCommand');
+		equal(notification.getBody().execMsg, 'prepareProductWindow prepareWallet prepareCoinSlot');
 	});
 });

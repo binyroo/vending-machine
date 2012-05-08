@@ -20,7 +20,7 @@ vm.CoinSlotMediator = iron.Class(puremvc.Mediator, {
 			case vm.Const.UPDATE_INSERTED_MONEY:
 
 				var comp = this.getViewComponent();
-				var money = note.getBody().insertedMoney;
+				var money = note.getBody();
 
 				comp.update(money);
 
@@ -35,10 +35,10 @@ vm.CoinSlotMediator = iron.Class(puremvc.Mediator, {
 
 		this.facade.registerCommand(vm.Const.RESET_COIN_SLOT, vm.ResetCoinSlotCommand);
 
-		comp.addListener('reset_coin', this._onResetCoin.bind(this));
+		comp.addListener('return_coin', this._onReturnCoin.bind(this));
 	},
 
-	_onResetCoin: function(e) {
+	_onReturnCoin: function(e) {
 		
 		this.sendNotification(vm.Const.RESET_COIN_SLOT);
 	}

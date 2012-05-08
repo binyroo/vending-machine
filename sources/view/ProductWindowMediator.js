@@ -37,7 +37,7 @@ vm.ProductWindowMediator = iron.Class(puremvc.Mediator, {
 
 			case vm.Const.UPDATE_INSERTED_MONEY:
 
-				var money = note.getBody().insertedMoney;
+				var money = note.getBody();
 				comp.updateOnMoney(money);
 
 				break;

@@ -26,7 +26,7 @@ vm.Money = iron.Class({
 
 		this._money -= money;
 
-		if (this._money <= 0) {
+		if (this._money < 0) {
 
 			this._money = currMoney;
 			throw new Error('not enough money');

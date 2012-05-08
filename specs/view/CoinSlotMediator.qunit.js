@@ -97,7 +97,7 @@ jQuery(function() {
 		this.facade.registerMediator(med);
 
 		// When
-		comp.dispatch('reset_coin');
+		comp.dispatch('return_coin');
 
 		// Then
 		equal(vm.ResetCoinSlotCommand.execCount, 1);
@@ -124,7 +124,7 @@ jQuery(function() {
 		this.facade.registerMediator(med);
 
 		// When
-		this.facade.sendNotification(vm.Const.UPDATE_INSERTED_MONEY, { insertedMoney: 1000 });
+		this.facade.sendNotification(vm.Const.UPDATE_INSERTED_MONEY, 1000);
 
 		// Then
 		equal(comp.getDisplayMoney(), 1000);

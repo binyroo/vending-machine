@@ -47,6 +47,11 @@ legend,hr,caption{display:none}
 
 #product-view ul li.on div{
 	background-color: #0CBE00;
+	cursor: pointer;
+}
+
+#product-view ul li.disabled p{
+	text-decoration: line-through;
 }
 
 #product-view ul li div img{
@@ -127,6 +132,7 @@ legend,hr,caption{display:none}
 #money-view > div.wallet-area ul li{
 	padding: 15px 15px 0 15px;
 	position:relative;
+	cursor: move;
 }
 
 #money-view > div.wallet-area ul li div{
