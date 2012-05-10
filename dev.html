@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ko"> 
+<head>
+<meta charset="utf-8" />
+<title>자판기</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+	<div id="vending-machine">
+
+		<div id="product-view">
+			<ul>
+			<!--
+			  <li>
+			    <div><img src="img/myImg.jpg" width="92" height="92" alt=""></div>
+			    <p><strong>콜라</strong>|<span>100</span>원</p>
+			  </li>
+			  <li class="on">
+			    <div><img src="img/myImg.jpg" width="92" height="92" alt=""></div>
+			    <p><strong>콜라</strong>|<span>100</span>원</p>
+			  </li>
+			  <li>
+			    <div><img src="img/myImg.jpg" width="92" height="92" alt=""></div>
+			    <p><strong>콜라</strong>|<span>100</span>원</p>
+			  </li>
+			  <li>
+			    <div><img src="img/myImg.jpg" width="92" height="92" alt=""></div>
+			    <p><strong>콜라</strong>|<span>100</span>원</p>
+			  </li>
+			  <li>
+			    <div><img src="img/myImg.jpg" width="92" height="92" alt=""></div>
+			    <p><strong>콜라</strong>|<span>100</span>원</p>
+			  </li>
+			  <li>
+			    <div><img src="img/myImg.jpg" width="92" height="92" alt=""></div>
+			    <p><strong>콜라</strong>|<span>100</span>원</p>
+			  </li>
+			  <li>
+			    <div><img src="img/myImg.jpg" width="92" height="92" alt=""></div>
+			    <p><strong>콜라</strong>|<span>100</span>원</p>
+			  </li>
+			  <li>
+			    <div><img src="img/myImg.jpg" width="92" height="92" alt=""></div>
+			    <p><strong>콜라</strong>|<span>100</span>원</p>
+			  </li>
+			-->
+			</ul>
+		</div>
+		
+		<div id="money-view">
+		
+			<div class="input-area">
+				<p class="input-label">투입구(Drop Here)</p>
+				<p class="input-drop"><span>0</span>원</p>
+				<button>반환버튼</button>
+			</div>
+			
+			<div class="wallet-area">
+				<ul>
+					<li>
+						<div class="money">
+							<img src="img/money0.png" width="120" height="56" alt="50원">
+							<p>50원</p>
+						</div>
+					</li>
+					<li>
+						<div class="money">
+							<img src="img/money1.png" width="120" height="56" alt="100원">
+							<p>100원</p>
+						</div>
+					</li>
+					<li>
+						<div class="money">
+							<img src="img/money2.png" width="120" height="56" alt="500원">
+							<p>500원</p>
+						</div>
+					</li>
+					<li>
+						<div class="money">
+							<img src="img/money3.png" width="120" height="56" alt="1000원">
+							<p>1000원</p>
+						</div>
+					</li>
+				</ul>
+				<p>지금 내 돈: <span>10000</span>원</p>
+			</div>
+		</div>
+		
+		<textarea id="log" name="log"></textarea>
+		
+	</div>
+
+<script type="text/javascript" src="lib/jquery-1.7.1.js"></script>
+<script type="text/javascript" src="lib/jquery-ui-1.8.18.js"></script>
+<script type="text/javascript" src="lib/puremvc-1.0.js"></script>
+<script type="text/javascript" src="lib/iron.js"></script>
+
+<script type="text/javascript" src="sources/common/Common.js"></script>
+
+<script type="text/javascript" src="sources/model/vo/ProductVO.js"></script>
+<script type="text/javascript" src="sources/model/vo/ProductProvider.js"></script>
+<script type="text/javascript" src="sources/model/vo/Money.js"></script>
+<script type="text/javascript" src="sources/model/vo/MyMoney.js"></script>
+<script type="text/javascript" src="sources/model/vo/InsertedMoney.js"></script>
+<script type="text/javascript" src="sources/model/ProductListProxy.js"></script>
+<script type="text/javascript" src="sources/model/MyMoneyProxy.js"></script>
+<script type="text/javascript" src="sources/model/InsertedMoneyProxy.js"></script>
+
+<script type="text/javascript" src="sources/view/component/ProductItemComponent.js"></script>
+<script type="text/javascript" src="sources/view/component/ProductWindow.js"></script>
+<script type="text/javascript" src="sources/view/component/Wallet.js"></script>
+<script type="text/javascript" src="sources/view/component/CoinSlot.js"></script>
+<script type="text/javascript" src="sources/view/ProductWindowMediator.js"></script>
+<script type="text/javascript" src="sources/view/WalletMediator.js"></script>
+<script type="text/javascript" src="sources/view/CoinSlotMediator.js"></script>
+
+<script type="text/javascript" src="sources/controller/SelectProductCommand.js"></script>
+<script type="text/javascript" src="sources/controller/InsertCoinCommand.js"></script>
+<script type="text/javascript" src="sources/controller/LostCoinCommand.js"></script>
+<script type="text/javascript" src="sources/controller/ResetCoinSlotCommand.js"></script>
+<script type="text/javascript" src="sources/controller/PrepareProductWindowCommand.js"></script>
+<script type="text/javascript" src="sources/controller/PrepareWalletCommand.js"></script>
+<script type="text/javascript" src="sources/controller/PrepareCoinSlotCommand.js"></script>
+<script type="text/javascript" src="sources/controller/StartupCommand.js"></script>
+
+<script type="text/javascript" src="sources/VendingMachineFacade.js"></script>
+
+<script type="text/javascript">
+var app = vm.VendingMachineFacade.getInstance(vm.VendingMachineFacade.NAME);
+app.startup();
+</script>
+
+</body>
+</html>
